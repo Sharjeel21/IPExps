@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customized Your T-shirts</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="https://img.freepik.com/free-photo/multi-colored-shirts-hanging-modern-boutique-store-generated-by-ai_188544-43479.jpg">
+    <center>
+        <p>
+        <h1><font face="Courier">CUSTOM T-SHIRT ORDER FORM</font></h1>
+        <h3><font face="Comic Sans MS">Fill Detials</font></h3>
+        </p>
+        <font face="Verdana">
+        <fieldset style="width: 50%" align="left">
+            <form onsubmit=generateInvoice()>
+                <label for="text_input">Enter Name:</label>
+                <input type="text" id="text_input" name="text_input" placeholder="Enter Your Name"
+                    required /><br /><br />
+
+                <label for="email_input">Enter Email:</label>
+                <input type="email" id="email_input" name="email_input" placeholder="Enter Your Email"
+                    required /><br /><br />
+
+                <label for="address">Delivery Address</label><br />
+                <textarea id="address" name="address" rows="4" cols="50" required></textarea><br /><br />
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required /><br /><br />
+
+                <label for="text_input">T-Shirt Tagline</label>
+                <input type="text" id="text_input" name="text_input" placeholder="Enter Tagline" /><br /><br />
+
+                <label for="radio">Gender:</label><br />
+                <input type="radio" id="male" name="gender" value="male" required />
+                <label for="male">Male</label><br />
+                <input type="radio" id="female" name="gender" value="female" required />
+                <label for="female">Female</label><br />
+                <input type="radio" id="other" name="gender" value="other" required />
+                <label for="other">Other</label><br /><br />
+
+                <label for="color_input">Color: </label>
+                <input type="color" name="color_input" id="color_input"><br><br>
+
+                <label for="file_input">Image on Your T-Shirt: </label>
+                <input type="file" id="file_input" name="file_input"><br><br>
+
+
+                <label for="size">Size: </label>
+                <select name="size" id="size" required>
+                    <option value="">Select Size:</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select><br><br>
+
+                <label for="number_input">Enter Quantity</label>
+                <input type="number" id="number_input" name="number_input" min="1" max="100" /><br /><br />
+
+                
+                <label for="range_input">Budget</label>
+                <input type="range" name="range_input" id="range_input" min="200" max="1000" step="5"
+                    oninput="range_value.innerText = range_input.value;"><span id="range_value">500</span><br><br>
+
+                <label for="text_input"> Any Special Requiest:</label><br>
+                <textarea id="text_input" name="text_input" rows="3" cols="50"></textarea><br><br>
+
+                
+
+                <center><input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </center><br>
+            </form>
+        </fieldset>
+    </font>
+    <div id="invoice"></div>
+    </center>
+</body>
+
+</html>
