@@ -44,7 +44,7 @@ function generateInvoice() {
           <p><strong>Tagline:</strong> ${tagline}</p>
           <p><strong>Gender:</strong> ${gender}</p>
           <p><strong>Color:</strong> ${color}</p>
-          <p><strong>Budget:</strong> $${budget}</p>
+          <p><strong>Budget:</strong> ₹${budget}</p>
           <p><strong>Special Request:</strong> ${specialRequest}</p>
           <p><strong>Size:</strong> ${size}</p>
           <p><strong>Quantity:</strong> ${quantity}</p>
